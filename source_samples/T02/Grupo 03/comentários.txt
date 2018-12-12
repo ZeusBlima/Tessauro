@@ -1,0 +1,10 @@
+binarySearch
+
+ok
+
+insertionSort
+ok
+
+operacoes_logicas_com_bits
+Linha 3: constantes devem ter tipo
+

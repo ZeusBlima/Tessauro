@@ -1,0 +1,52 @@
+code media
+	start
+		{declaração de variáveis}
+		real notaA, notaB, media;
+		unaterable real qtd= 2;
+		
+		{entrada pelo teclado}
+		capture (notaA, notB);
+		 
+		{caulculo da média}
+		media := (notaA + notaB) / qtd
+
+		{mostra a média}
+		show (media);
+
+		
+	finish
+
+
+code buscaPosicaoValor
+	start 
+		integer vector [5] cadeia;
+		integer cont, posicao, valor;
+		cont : = 1;{atribuicao}
+		as long as (cont <= 5) do 
+		start
+			cadeia[cont] := cont * 2;
+			cont := cont + 1; 
+		finish
+		capture(valor);
+		considering posicao from 1 to 5 by 1 do
+		start
+			in case that (cadeia[posicao] = valor) do
+				show(posicao);
+		finish
+	finish
+
+
+code maiorValor
+	start
+		integer valorA, valorB;
+		capture (valorA, valorB);
+		
+		in case that (valorA > valorB) do
+			show(valorA);
+		in case that (valorB > valorA) do
+			show(valorB);
+		else 
+			show("Valores iguais.");
+	finish
+		
+		

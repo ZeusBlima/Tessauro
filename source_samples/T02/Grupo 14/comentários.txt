@@ -1,0 +1,12 @@
+acharParOuImpar
+
+Linha 3: "programa:" não é reservada, ela é um símbolo da gramática
+Linha 8: strings são delimitadas por aspas duplas
+
+numMaior
+Linha 17: "programa:" não é reservada, ela é um símbolo da gramática
+Linha 25: não há mais ; no fim das estruturas de controle
+
+busca
+Linha 31: "programa:" não é reservada, ela é um símbolo da gramática
+Linha 40 e outra: não há mais ; no fim das estruturas de controle

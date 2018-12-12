@@ -1,0 +1,55 @@
+code Sort_Simples
+
+{Sort Simples - Problema 1042 do URI
+Leia 3 valores inteiros e ordene-os em ordem crescente. 
+No final, mostre os valores em ordem crescente, uma linha em branco 
+e em seguida, os valores na sequ�ncia como foram lidos.}
+
+start
+	{declaracao}
+
+	integer vector [3] vet, i, temp, a, b, c;
+
+	{comando}
+
+	capture (a, b, c);
+	
+	vet[1] := a;
+	vet[2] := b;
+	vet[3] := c;
+
+	considering i from 0 to 2 by 1 do
+		start
+			in case that (a > b) do
+ 				start
+					temp := a;
+					a := b;
+					b := temp;
+				finish
+			else
+				start
+					in case that (b > c) do
+ 						start
+							temp := b;
+							b := c;
+							c := temp;
+						finish
+					else
+						start
+							in case that (a > c) do
+ 								start
+									temp := a;
+									a := c;
+									c := temp;
+								finish
+						finish
+				finish
+		
+							
+		finish
+
+	show (a, b, c);
+
+	considering i from 1 to 3 by 1 do
+		show (vet[1]);			
+finish

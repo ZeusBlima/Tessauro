@@ -1,0 +1,11 @@
+
+fibo
+
+Linha 12: esse ; não existe mais na versão mais nova
+Linha 6 e outra: show tem ; no final
+
+TR
+Linha 18: dimensões devem ser declaradas junto com o vetor
+
+programa1
+Linhas 3 e 4: Este tipo de inicialização não existe na linguagem. Assumiremos que um vetor constante pode ser inicializado em uma linha posterior à sua declaração (vou deixar isso explícito na próxima versão da especificação da Tesauro).

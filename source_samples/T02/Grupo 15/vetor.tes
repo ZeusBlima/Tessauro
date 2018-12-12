@@ -1,0 +1,21 @@
+code VetorPontos
+
+start
+
+/*
+  imprime vetor entre dois pontos
+*/
+
+integer vector[2] origem;
+integer vector[2] destino;
+
+show("Digite as coordenadas da origem");
+capture(origem[1], origem[2]);
+
+show("Digite as coordenadas do destino");
+capture(destino[1], destino[2]);
+
+show("O vetor dos dois pontos eh:");
+show(destino[1] - origem[1], destino[2] - origem[2]);
+
+finish

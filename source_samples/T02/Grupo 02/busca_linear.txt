@@ -1,0 +1,22 @@
+﻿programa code busca_linear
+start
+	integer valor_busca,i;
+	integer vector [100] Vetor;
+  integer resultado := -1;
+
+	show("Digite o valor que deseja buscar: ");
+	capture(valor_busca);
+
+	considering(i:=1; i<=100; i:=i+1) do
+	start
+		Vetor[i] := i;
+    	in case that(valor_busca = Vetor[i]) do
+    		resultado := 1;
+	finish
+
+    in case that(resultado = 1) do
+  		show("Valor '",valor_busca,"' encontrado!");
+  	in case that(resultado = -1) do
+    	show("Valor NÃO encontrado!");
+
+finish

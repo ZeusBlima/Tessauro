@@ -1,0 +1,11 @@
+CalculaMax
+
+Linha 10: em um bloco, declarações devem vir antes dos comandos
+Linha 19: não há ; após finish
+
+
+Enquanto
+Linha 4: constantes devem ter tipo
+
+VerificaParidade
+ok

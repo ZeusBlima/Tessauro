@@ -1,0 +1,16 @@
+ao invés de usar um pdf, criar três arquivos de texto
+
+somadevetoressimples
+
+declaração de vetor sintaticamente incorreta
+atribuição tem que ter ; no final
+se houver mais de um comando dentro de uma estrutura de repetição/condição, deve-se usar start e finish
+esse é um caso onde um considering seria mais apropriado
+
+geass
+Os colchetes são metaoperadores da gramática, que indicam uma cadeia opcional. Ou seja, não devem envolver o "else" no código fonte
+
+DecimalQueEhBinarioEAlterableQueEhUnalterable
+
+variáveis não podem ser declaradas e definidas na mesma linha
+Os colchetes são metaoperadores da gramática, que indicam uma cadeia opcional. Ou seja, não devem envolver o "else" no código fonte

@@ -1,0 +1,35 @@
+code codigo_um
+start
+
+	unalterable integer numIntegrantes = 2;
+
+	{Vetor de symbols que representa uma string}
+	symbol vector [30] situacao;
+
+	real vector [numIntegrantes] notas_individuais;
+	real nota_grupo;
+	
+	integer i;
+
+	considering i from 1 to 2 by 1 do
+		capture(notas_individuais[i]);
+	
+	nota_grupo := (notas_individuais[1] + notas_individuais[2]) / numIntegrantes;
+	
+	in case that (nota_grupo >= 7) do
+	start
+		situacao := "Aprovação direta!";
+		show(situacao);
+	finish
+	else in case that ((nota_grupo >= 5) and (nota_grupo < 7)) do
+	start
+		situacao := "Recuperação.";
+		show(situacao);
+	finish
+	else
+	start
+		situacao := "Reprovação."
+		show(situacao);
+	finish
+
+finish

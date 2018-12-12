@@ -1,0 +1,37 @@
+code teste
+start
+	integer a, b;
+	{unalterable integer c := 5;}
+	unalterable real r = 2.0;
+	symbol s;
+	symbol vector v [5];
+	integer vector m [5][5];
+	
+	capture (a, b);
+	
+	in case that (a > b) do
+	start
+		a := a - b;
+	finish
+	else in case that (a >= b and a <= b) do
+	start
+		a := a * b;
+	finish
+	else in case that (a < b) do
+	start
+		{xou(r);}
+	finish
+	else
+	start
+		v := "TESTE";
+		as long as (a != 6) do
+		start
+			s := v[a];
+			in case that (s == 'S') do
+				s := 'X'
+			show (s);
+			
+		finish
+	finish
+	
+finish

@@ -1,0 +1,18 @@
+code teste
+start
+	integer a, b;
+	{unalterable integer c := 5;}
+	unalterable real r := 2.0;
+	symbol s;
+	symbol vector v [5];
+	integer vector m [5][5];
+	
+	a := 0;
+	as long as (a != 42) do
+	start
+		show("Qual o sentido da vida, o universo e tudo mais?")
+		capture(a)
+	finish
+	
+		
+finish

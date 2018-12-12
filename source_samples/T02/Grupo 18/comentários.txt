@@ -1,0 +1,1 @@
+Nesta etapa o envio solicitado foi de três códigos tesauro. O arquivo .sable com o analisador léxico deve ser enviado na tarefa correspondente a ele, no sigaa.

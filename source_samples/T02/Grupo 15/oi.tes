@@ -1,0 +1,24 @@
+code oiUmPontoUm
+
+start
+
+{ programa de boas vindas }
+
+unalterable real um_ponto_zero = 1.0;
+unalterable real zero_ponto_um = 0.1;
+real Um_Ponto_Um;
+
+unalterable symbol Oi = "Oi ";
+symbol nome;
+
+Um_Ponto_Um := 0;
+nome := "";
+
+as long as (nome != "sair") do
+start
+  capture(nome);
+  show(Oi + nome);
+  show("by Oi versao " + Um_Ponto_Um);
+finish;
+
+finish

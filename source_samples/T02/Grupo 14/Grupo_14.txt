@@ -1,0 +1,43 @@
+{O usuário insere in integer e diz se ele é par ou ímpar}
+
+programa: code acharParOuImpar                      {programa}
+    start                                           {bloco}
+        integer x;                                  {declaração}
+        capture (x);                                {comando}
+        in case that (x % 2 == 0) do
+            show ('PAR');                           {comando}
+        else 
+            show ('ÍMPAR');
+        ;                                           {comando}
+    finish                                          {bloco}
+
+
+{Pedir 10 números ao usuário e imprimir o maior}
+
+programa: code numMaior
+    start
+        real max, x;
+        considering x from 1 to 10 by 1 do
+            start     
+                capture (x);
+                in case that (x > max) do max := x;
+            finish 
+        ;
+        show (max);
+    finish
+
+
+{}
+programa: code busca
+    start 
+        integer x, int;
+        
+        unaterable integer vector [10] a = [11,22,33,44,550,66,77,88,9,110];
+        show ("entre com um numero para verificar em um vetor");
+        capture (int);
+        considering x from 1 to 10 by 1 do
+            start    
+                in case that (int==a[x]) do show("Esta presente no vetor"); ;
+            finish
+        ;
+    finish    

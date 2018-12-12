@@ -1,0 +1,10 @@
+media
+
+Linha 11: falta ; no final
+
+buscaPosicaoValor
+Linha 33: o operador de igualdade é o ==
+
+maiorValor
+
+ok

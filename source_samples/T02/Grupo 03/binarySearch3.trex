@@ -1,0 +1,44 @@
+code binarySearch
+
+start
+	integer bot, mid, top, position;
+	real key;
+	unalterable integer lenghtV = 10;
+	real vector[lenghtV] v;
+	
+	v[1] := 1.2;
+	v[2] := 23.7;
+	v[3] := 15;
+	v[4] := 24;
+	v[5] := 12.7;
+	v[6] := 7;
+	v[7] := 51.78;
+	v[8] := 3;
+	v[9] := 79;
+	v[10] := 19;
+	
+	bot := 1;
+	top := lenghtV;
+	key := 3;
+	position := -1;
+	
+	as long as(bot <= top and !(position == mid)) do
+		start
+			mid := (bot + top) / 2;
+			
+			in case that(key > v[mid]) do
+				bot := mid + 1;
+			else
+				start
+					in case that(key < v[mid]) do
+						top := mid - 1;
+					else
+						position := mid;
+				finish
+		finish
+		
+	in case that(position != -1) do
+		show(position);
+	else
+		show("Valor não encontrado");
+finish

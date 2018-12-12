@@ -1,0 +1,26 @@
+code ParOuImpar
+
+start
+
+unalterable symbol Oi = "Oi ";
+symbol nome;
+
+nome := "";
+
+considering i from 0 to 10 by 1 do
+start
+  in case that (i % 2 == 0) do
+    start
+      show(i + " eh par");
+  	finish
+  else
+    start
+  	  show(i + " eh impar");
+    finish;
+finish;
+
+finish
+
+
+
+

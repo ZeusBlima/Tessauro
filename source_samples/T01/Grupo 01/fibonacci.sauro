@@ -1,0 +1,18 @@
+code fibonacci
+start
+	unalterable integer i = 0;
+	unalterable integer j = 1;
+	unalterable integer k = 1;
+	unalterable integer t = 0;
+	unalterable integer n = 0;
+
+	capture(n);
+	as long as (k <= n) do
+	start
+		t := i + j;
+		i := j;
+		j := t;
+		k := k + 1;
+	finish
+	show(j);
+finish

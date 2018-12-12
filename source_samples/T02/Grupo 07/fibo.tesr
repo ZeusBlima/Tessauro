@@ -1,0 +1,14 @@
+code fibonacci
+    start
+        unalterable integer fibo_n = 10000000;
+        integer vector [fibo_n] fibo;
+        integer number;
+        show("Digite um número entre 1 e 10000000:\n")
+        capture(number);
+        fibo[1] := 1;
+        fibo[2] := 1;
+        considering n from 3 to fibo_n by 1 do
+            fibo[n] := fibo[n-1] + fibo[n-2];
+        ;
+        show("O fibonacci de ", number, " é: ", fibo[number]);
+    finish

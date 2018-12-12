@@ -1,0 +1,15 @@
+ordenação.sauro
+   Linha 11: esta declaração faz com que i, temp, a, b e c sejem vetores (e não variáveis inteiras).
+  Linha 21: não esquecer que vetores são indexados a partir do 1
+  Linha 54: show(vet[i])
+
+fibonacci.sauro:
+ ok
+
+triangulos.sauro
+   Linha 3: constantes precisam do modificador unalterable
+   Linha 7 e outras: atribuições a variáveis sempre precisam ser feitas com :=
+
+
+
+

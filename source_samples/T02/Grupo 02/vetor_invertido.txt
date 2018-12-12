@@ -1,0 +1,35 @@
+programa code vetor_invertido
+start
+    unalterable integer MAX = 8;
+    integer vector [MAX] numeros; 
+    numeros[1] := 1;
+    numeros[2] := 2;
+    numeros[3] := 3;
+    numeros[4] := 4;
+    numeros[5] := 5;
+    numeros[6] := 6;
+    numeros[7] := 7;
+    numeros[8] := 8;
+
+    integer i, aux;
+
+    show("Vetor normal: ");
+    considering(i:=1; i<=MAX; i:=i+1) do
+      show(numeros[i-1] );
+ 
+    considering(i:=1 ; i <= MAX/2; i:=i+1) do
+    start
+        aux := numeros[i-1];
+        numeros[i-1] := numeros[MAX-i];
+        numeros[MAX-i] := aux;
+    finish
+
+    show('\n');
+
+    show("Vetor invertido: ");
+    considering(i:=1; i<=MAX; i:=i+1) do
+      show(numeros[i-1] );
+   
+    show('\n');
+
+finish

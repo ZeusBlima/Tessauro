@@ -1,0 +1,12 @@
+
+ordenar_numeros
+Linha 17 e outras: não há mais ; após estruturas de controle
+
+exemplo2
+Linha 57 e outras: parênteses são obrigatórios no 'in case that' e no 'as long as'
+Linha 25 e outras: não há mais ; após estruturas de controle
+Linha 18: comentários de bloco são definidos com chaves
+
+somador_8bit_completo
+
+Linha 28: não há mais ; após estruturas de controle

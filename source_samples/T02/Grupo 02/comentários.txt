@@ -1,0 +1,13 @@
+buscalinear
+
+Linha 10: sintaxe do considering está errada
+Linha 17: igualdade não se expressa com operador =
+
+frase
+Linha 3: sintaxe do unalterable está incorreta
+
+vetor_invertido
+
+Linha 14: declarações não se misturam com comandos em um mesmo bloco
+Linha 10: sintaxe do considering está errada
+Linha 18: indexação dos vetores começa em 1

@@ -10,7 +10,7 @@ public class Main
 	{
 		try
 		{
-			String arquivo = "source_samples/expressao.calc";
+			String arquivo = "source_samples/T02/Grupo 13/teste_01.trex";
 
 			Lexer lexer =
 					new Lexer(

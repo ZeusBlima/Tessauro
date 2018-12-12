@@ -1,0 +1,28 @@
+programa code frase
+start
+	unalterable integer tamanho := 40;
+	symbol vector [tamanho] frase;
+	integer contador,vogais;
+	contador := 0;{guardar o tamanho da palavra}
+	vogais := 0
+	frase := "o rato roeu a coroa do rei de roma";{definição da frase}
+
+	as long as (contador < 40) do  {ocorrência fora do tamanho da frase}
+	start
+		in case that (frase[contador] == "a") do
+			vogais := vogais + 1;
+		in case that (frase[contador] == "e") do
+			vogais := vogais - 1;
+		in case that (frase[contador] == "i") do
+			vogais := vogais * 2;
+		in case that (frase[contador] == "o") do
+			vogais := vogais / 3;
+		in case that (frase[contador] == "u") do
+			vogais := vogais % 4;
+		contador := contador + 1;
+	finish
+	show(frase,contador,vogais);
+finish 
+
+
+

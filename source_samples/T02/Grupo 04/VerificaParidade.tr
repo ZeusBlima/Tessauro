@@ -1,0 +1,17 @@
+code VerificaParidade
+
+start
+    integer valor;
+
+    capture (valor);
+
+    in case that ( (valor % 2) == 0 ) do
+        start
+            show("par");
+        finish
+    else
+        start
+            show("impar");
+        finish
+
+finish

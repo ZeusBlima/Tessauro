@@ -1,0 +1,10 @@
+oiUmPontoUm
+Linha 20: não há operador de concatenação +
+Linha 22: não há mais ; no final de uma estrutura de controle
+
+ParOuImpar
+Linha 14: não há operador de concatenação +
+Linha 19 e outra: não há mais ; no final de uma estrutura de controle
+
+VetorPontos
+ok

@@ -1,0 +1,28 @@
+code codigo_dois
+start
+	unalterable symbol estrela = '*';
+	unalterable symbol espaco = ' ';
+	unalterable integer tamanho = 10;
+	symbol vector [tamanho][tamanho] desenhoX;
+	integer i;
+	integer j;
+	
+	i := 1;
+	j := 1;
+	as long as (i <= 10) do 
+	start
+		as long as (j <= 10) do 
+		start
+			in case that ((i == j) or (j == (tamanho - i + 1))) do
+			start
+				desenhoX[i][j] := estrela;
+			finish
+			else
+			start
+				desenhoX[i][j] := espaco;
+			finish
+		finish
+	finish
+		
+	show(desenhoX);
+finish

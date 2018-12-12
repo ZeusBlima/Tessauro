@@ -6,9 +6,10 @@ Helpers
 	letra = ['a' .. 'z'] | ['A' .. 'Z'];
 	sub = '_';
 	
-	espaco = ' ' ;
-	rc = 13;
-	nl = 10;
+	espaco = 32 ;
+	cr = 13;
+	lf = 10;
+	ht = 9;
 	
 	qualquer_coisa = [0 .. 0xffff] ;
 	
@@ -18,25 +19,76 @@ Helpers
  
 Tokens
 
-	tipo_primitivo = 'integer' | 'real' | 'char' ;
-	ident = letra (letra | sub)*;
+	blank = (espaco | cr | lf | ht)+;
 	
-	num_dec = 'd'? (digito_dec+);
-	num_bin = 'b' (digito_bin+);
+	int = 'integer' ; 
+	float = 'real' ;
+	char = 'symbol' ;
+	array = 'vector' ;
+	const = 'unalterable';
 	
+	
+	
+	program = 'code' ;
+	begin = 'start';
+	
+	end = 'finish';
+	
+	in = 'in';
+	case = 'case';
+	that = 'that';
+	
+	else = 'else';
+	
+	as = 'as';
+	long = 'long';
+	
+	considering = 'considering';
+	do = 'do';
+	from = 'from';
+	to = 'to';
+	
+	read = 'capture';
+	write = 'show';	
+	
+	val_dec = 'd'? (digito_dec+);
+	val_bin = 'b' (digito_bin+);
+	val_real = digito_dec+ '.' digito_dec+ ;
+	val_char = ''' qualquer_coisa ''';
+	val_string = '"' qualquer_coisa* '"';
 	
 	
 	atrib = ':=';
+	atrib_const = '=';
 	pv = ';' ;
+	v = ',';
 	
-	plus = '+';	
-	minus = '-';
-	mult = '*';
+	mais = '+';	
+	menos = '-';
+	vezes = '*';
 	div = '/';
 	mod = '%';
+	
+	igual = '==';
+	diferente = '!=';
+	maior_que = '>';
+	menor_que = '<';
+	maior_igual = '>=';
+	menor_igual = '<=';
+	
+	not = '!';
+	and = 'and';
+	or = 'or';
+	xor = 'xor';
+	
+	l_col = '[';
+	r_col = ']';
 	l_par = '(';
 	r_par = ')';
-	blank = (espaco | rc | nl)+;
+	
+	
+	
+	ident = letra (letra | sub)*;
 	
 	comentario = '{' conteudo_comentario* '}';
 

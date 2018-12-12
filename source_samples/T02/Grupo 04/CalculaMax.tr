@@ -1,0 +1,23 @@
+code CalculaMax
+
+start
+    integer vector[3] valores;
+
+    valores[1] := 3;
+    valores[2] := 2;
+    valores[3] := 4;
+
+    integer aux;
+    aux := valores[1];
+
+    considering var i from 2 to 3 by 1 do
+    start
+        in case that (valores[i] > aux) do
+            start
+                aux = valores[v]
+            finish
+    finish ;
+
+    show(aux);
+
+finish

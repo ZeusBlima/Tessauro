@@ -1,0 +1,14 @@
+
+kmp
+
+Linha 8: em um bloco, declarações devem vir antes dos comandos
+Linha 2: um vetor precisa ter sua dimensão declarada
+Linha 6: em um bloco, declarações devem vir antes dos comandos
+
+merge
+
+Linha 16: parênteses não são opcionais na estrutura "in case that"
+
+sparse_table
+Linha 7: em um bloco, declarações devem vir antes dos comandos
+Linha 36: parênteses não são opcionais na estrutura "as long as"

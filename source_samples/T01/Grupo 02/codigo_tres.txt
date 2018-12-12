@@ -1,0 +1,39 @@
+code codigo_tres
+start
+	integer executa;
+	real a, b, resultado;
+
+	show("veja os resultados de varias operações matematicas");
+	executa := 1;
+	as long as ( executa != 0) do
+	start
+		show("digite dois numeros");
+		capture(a,b);
+		resultado := a-b;
+		show("a-b = ",resultado);
+		resultado := a*b;
+		show("a*b = ",resultado);
+		resultado := a%b;
+		show("a%b = ",resultado);
+		resultado := a != b;
+		show("a!=b = ",resultado);
+		resultado := a <= b;
+		show("a<=b = ",resultado);
+		resultado := a < b;
+		show("a<b = ",resultado);
+		resultado := a >= b;
+		show("a>=b = ",resultado);
+		resultado := a > b;
+		show("a>b = ",resultado);
+		resultado := !a;
+		show("!a = ",resultado);
+		resultado := !b;
+		show("!b = ",resultado);
+		resultado := a xor b;
+		show("a xor b = ",resultado);
+		show("quer calcular mais numeros (sim = 1/ nao = 0)");
+		capture(executa);
+	finish
+	a := b1100;	
+	show("Versões futuras: explorar binários. Ex: a = ", a);
+finish

@@ -1,0 +1,17 @@
+teste_01
+
+Linha 5: atribuição de valor a constante é feita com operador =
+Linha 16: não há if nesta linguagem
+Linha 27: sintaxe do considering está incorreta
+
+teste_02
+
+Linha 27: sintaxe do as long as incorreta - parênteses são obrigatórios
+
+teste_03
+Linha 5: atribuição de valor a constante é feita com operador =
+Linha 13 e outra: falta ';'
+
+
+
+

@@ -1,0 +1,44 @@
+code programa1
+start
+  unalterable int vector [2] [2] matUM = {3,6,1,3,9,6,3,5,6};
+  unalterable int vector [2] [2] matDOIS = {1,3,2,4,1,2,6,8};
+  unalterable symbol vector ola = "hello";
+  unalterable symbol vector mundo = "world";
+  integer fator;
+  integer linha, coluna, iterador;
+
+  show ("Digite o fator da matriz: "); 
+  capture (fator);
+  in case that (fator <= 3) do
+  start
+    int vector resultado [fator] [fator];
+    considering linha from 1 to fator by 1 do
+    start
+      considering coluna from 1 to fator by 1 do
+      start
+        resultado [linha][coluna] := 0;
+        considering iterador from 1 to fator by 1 do
+        start
+          resultado [linha][coluna] := resultado [linha][coluna] + ( matUM [linha][iterador] * matDOIS[iterador][coluna] );
+        finish;
+      finish;
+    finish;
+  
+    show ("A matriz resultante tem o seguinte formato: \n");
+    considering linha from 1 to fator by 1 do
+    start
+      considering coluna from 1 to fator by 1 do
+      start
+        show (resultado [linha][coluna] , "  ");
+      finish;
+      show ("\n");
+    finish;
+  finish;
+  else
+  start
+    show("Não podemos calcular a multiplicação, pois as matrizes básicas possuem fator 3!");
+  finish;  
+  show ("Saindo do programa!");
+finish;
+
+//tentativa de multiplicacao de matrizes

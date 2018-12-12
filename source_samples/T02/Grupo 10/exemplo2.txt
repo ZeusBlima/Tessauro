@@ -1,0 +1,125 @@
+code eliminacao_gauss
+
+start
+
+unalterable integer tamanho = 3;
+
+integer i, j, diagonal;
+real temp;
+real vector[tamanho][tamanho] a;
+real vector[tamanho] b;
+real vector[tamanho][tamanho] a_escalonado;
+real vector[tamanho] b_escalonado;
+real vector resultado[tamanho]
+symbol sem_solucao, homogeneo, infinita;
+
+show("Forneça o Sistema Linear do tamanho ", tamanho, "x", tamanho, " : ");
+
+/* Lendo o Sistema Linear e Armazenando em uma matriz */
+considering i from 0 to tamanho by 1 do
+start
+	considering j from 0 to tamanho by 1 do
+	start
+		show("Forneça o valor da constante na posição: a[", i, "][", j, "] do Sistema Linear!");
+		capture(a[i][j]);
+	finish;
+finish;
+
+/* Lendo os termos independentes e Armazenando em um vetor */
+considering i from 0 to tamanho by 1 do
+start
+	show("Forneça o valor do termo independente na posição: b[", i, "] do Sistema Linear!");
+	capture(b[i]);
+finish;
+
+/* Criando o sistema que será escalonado */
+a_escalonado := a;
+b_escalonado := b;
+
+/* Usando o Método de Eliminação de Gauss */
+considering diagonal from 0 to tamanho by 1 do
+start
+	considering i from 1 to tamanho by 1 do
+	start
+		/* a_escalonado[i][diagonal] := a_escalonado[i][diagonal]*a_escalonado[diagonal][diagonal] - a_escalonado[diagonal][diagonal]*a_escalonado[i][diagonal]; */
+		considering j from diagonal to tamanho by 1 do
+		start
+			a_escalonado[i][j] := a_escalonado[i][j]*a_escalonado[diagonal][diagonal] - a_escalonado[diagonal][j]*a_escalonado[i][diagonal];
+		finish;
+	b[i] := b[i]*a[diagonal][diagonal] - b[diagonal]*a_escalonado[i][diagonal];
+	finish;
+finish;
+
+/* Resolvendo para Xi */
+sem_solucao := homogeneo := '0';
+considering i from (tamanho-1) to 0 by -1 do
+start
+	in case that a_escalonado[i][i] == 0 and b_escalonado[i] != 0 do
+	start
+		i := 0;
+		sem_solucao := '1';
+	finish
+	else
+	start
+	
+		/* Calcula o resultado para variável Xi */
+		temp := 0.0;
+		j := tamanho - 1;
+		as long as j >= (i + 1) do
+		start
+			temp := temp + a_escalonado[i][j] * resultado[j];
+		j := j - 1;
+		finish;
+		resultado[i] := (b_escalonado[i] - temp) / a_escalonado[i][i];
+		
+		/* Verifica se a única solução é a nula */
+		in case that !(resultado[i]) and homogeneo != '2' do
+		start
+			homogeneo := '1';
+		finish
+		else
+		start
+			homogeneo := '2';
+		finish;
+		
+		/* Verifica se a variável Xi possui mais de uma solução */
+		temp := 0.0;
+		j := i + 1;
+		as long as j <= (tamanho-1) do
+		start
+			in case that (a_escalonado[i][j] != 0) and (a_escalonado[j][j] == 0) do
+			start
+				infinita := '1';
+			finish;
+			j := j + 1;
+		finish;
+		
+	finish;
+finish;
+
+/* Consultando Solução */
+in case that sem_solucao == '1' do
+start
+	show("O Sistema não possue solução!");
+finish
+else
+start
+	in case that homogeneo == '0' and infinita == '0' do
+	start
+		show("O Sistema possue solução única!");
+	finish
+	else
+	start
+		in case that homogeneo == '1' do
+		start
+			show("O Sistema possue solução trivial!");
+		finish
+		else
+		start
+			show("O Sistema possue solução infinita!");
+		finish;
+	finish;
+finish;
+
+
+finish

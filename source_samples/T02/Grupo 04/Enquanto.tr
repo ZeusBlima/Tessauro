@@ -1,0 +1,15 @@
+code Enquanto
+
+start
+    unalterable valor = "sair";
+
+    symbol simbolo;
+
+    as long as (valor != simbolo) do
+    start
+        capture(simbolo);
+        show(simbolo);
+    finish
+
+
+finish

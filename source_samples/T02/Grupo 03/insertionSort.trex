@@ -1,0 +1,40 @@
+code insertionSort
+start
+	unalterable integer n = 100; {Tamanho do vetor}
+	integer vector [n] arr;
+	integer i, key, j, type_ord;
+
+	{Inserindo valores no array}
+	considering i from 1 to n by 1 do
+		capture(arr[i]);
+
+	{Recebe o tipo de ordenação. 0 para crescente e qualquer outro valor para decrescente}
+	capture(type_ord);
+
+	considering i from 2 to n by 1 do
+	start
+		key := arr[i];
+		j := i-1;
+
+		in case that(type_ord == 0) do
+		start
+			{Ordena o vetor em ordem crescente}
+			as long as(j >= 1 and arr[j] > key) do
+			start
+				arr[j+1] := arr[j];
+				j := j-1;
+			finish
+		finish
+		else
+		start
+			{Ordena o vetor em ordem decrescente}
+			as long as(j >= 1 and arr[j] < key) do
+			start
+				arr[j+1] := arr[j];
+				j := j-1;
+			finish
+		finish
+
+		arr[j+1] := key;
+	finish
+finish

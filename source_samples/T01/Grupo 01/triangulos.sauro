@@ -1,0 +1,58 @@
+code triangulos
+start
+    integer flagBreak = 1;
+    integer i = 1;
+    real vector  [3] arestas;
+    symbol vector [9] texto;
+    texto = "Triângulo";
+    show("Digite o comprimento da hipotenusa: ");
+    arestas[1] := capture(a);
+    as long as(flagBreak == 1) do
+    start
+        show("\nDigite o comprimento do triângulo: ");
+        arestas[2] := capture(a);
+        in case that((arestas[1] - arestas[2]) < 0) do
+            show("\nA hipotenusa não pode ser menor do que outro cateto !");
+        else
+            flagBreak := 0; 
+    finish
+    as long as(flagBreak == 0) do
+    start
+        show("\nDigite a altura do triângulo: ");
+        arestas[3] := capture(a);
+        in case that((arestas[1] - arestas[3]) < 0) do
+            show("\nA hipotenusa não pode ser menor do que outro cateto !");
+        else
+            flagBreak := 1; 
+    finish
+    
+    integer a1 = arestas[1];
+    integer a2 = arestas[2];
+    integer a3 = arestas[3];
+    integer a1a2 = a1+a2;
+    integer a1a3 = a1+a3;
+    integer a2a3 = a2+a3;
+
+    integer perimetro = a1+a2+3;
+    integer area = a3*a2/2;
+
+    in case that((a3 >= a1a2) or (a2 >= a1a3) or (a1 >= a2a3)) do
+        show("\nNão cumpre com a condição de existência de um triângulo ! Game over X.X")
+    else    
+    start 
+        show("\nPerímetro: ", perimetro);
+        in case that(perimetro%2 == 0) do
+            show("\nPerímetro é par !");
+        else
+            show("\nPerímetro é ímpar !");
+
+        show("\nÁrea: ", area);
+
+        in case that(a1 == a2 xor a1 == a3 xor a2 == a1) do
+            show("\n",texto," Isóceles");
+        in case that((a1 == a2 and a1 == a3) or (a2 == a1 and a2 == a3) or (a3 == a1 and a3 == 2)) do
+            show("\n",texto," Equilátero");
+        in case that((!(a1 != a2) and !(a1 != a3))) do
+            show("\n",texto," Escaleno");
+    finish
+finish

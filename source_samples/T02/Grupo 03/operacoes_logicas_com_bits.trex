@@ -1,0 +1,28 @@
+code operacoes_logicas_com_bits
+start
+	unalterable um = b1000;
+	unalterable zero = b0;
+	symbol c;
+
+	show("Digite dois números: ");
+	capture(um, zero);
+
+	show("\nOperação de AND\n");
+	show(um, " & ", zero, " = ", um and zero);
+
+	show("\nOperação de OR\n");
+	show(um, " | ", zero, " = ", um or zero);
+
+	show("\nOperação de XOR\n");
+	show(um, " ^ ", zero, " = ", um xor zero);
+
+	show("\nOperador NOT\n");
+	show("~", um, " = ",  !um);
+
+	show("\nShift para esquerda\n");
+	show(um, " << ", 2, " = ", (um * 2) % 65535);  {Somente números de 16 bits}
+
+	show("\nConvertendo para um caractere\n");
+	c := um;
+	show (um, " = ", c);
+finish

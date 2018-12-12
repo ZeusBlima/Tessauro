@@ -1,0 +1,33 @@
+code teste
+start
+	integer a, b;
+	{unalterable integer c := 5;}
+	unalterable real r = 2.0;
+	symbol s;
+	symbol vector v [5];
+	integer vector m [5][5];
+	
+	capture (a, b);
+	
+	in case	 that (a > b) do
+	start
+		a := a - b;
+	finish
+	else in case         that (a >= b and a <= b) do
+	start
+		a := a * b;
+	finish
+	else if (a < b) do
+	start
+		show(r);
+	finish
+	else
+	start
+		v := "TESTE";
+		considering a from d1 to b00000101 by 1 do
+		start
+			m[a][a] := v[a];
+		finish
+	finish
+	
+finish
